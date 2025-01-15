@@ -11,10 +11,15 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "@primevue/themes": "^4.2.5",
     "@sidebase/nuxt-auth": "^0.10.0",
     "next-auth": "~4.21.1",
     "nuxt": "^3.15.2",
+    "primevue": "^4.2.5",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.2.5"
   }
 }
