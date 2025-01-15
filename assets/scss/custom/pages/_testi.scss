@@ -1,0 +1,65 @@
+/*********************************/
+/*         Testimonial           */
+/*===============================*/
+.swiper-wrapper {
+    .swiper-button-prev, .swiper-button-next {
+        @apply absolute top-2/4 -translate-y-2/4 text-base w-8 h-8 rounded-full bg-white dark:bg-slate-900 text-dark dark:text-white border-0 transition-all duration-500  ease-in-out z-10 shadow-md dark:shadow-gray-700;
+        &:hover {
+            @apply bg-red-500 text-white;
+        }
+        &.swiper-button-prev  {
+            @apply start-0 mt-2;
+        }
+        &.swiper-button-next  {
+            @apply end-0 mt-2;
+        }
+        
+    }
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    @apply text-[15px] #{!important};
+}
+
+.swiper-pagination-border {
+    @apply text-center;
+
+    span {
+        @apply rounded-full bg-black/20 dark:bg-white/20 transition-all duration-500 ease-in-out border-2 border-white dark:border-slate-900 m-1 p-[2px];
+
+        &.swiper-pagination-bullet-active {
+            @apply bg-red-500 border-red-500;
+        }
+    }
+}
+
+
+/* Tns control */
+.tns-controls {
+    button[content="prev"],
+    button[data-controls="next"] {
+        @apply absolute top-2/4 -translate-y-2/4 text-base w-8 h-8 rounded-full bg-white dark:bg-slate-900 text-dark dark:text-white border-0 transition-all duration-500 ease-in-out z-10 shadow-md dark:shadow-gray-700;
+
+        &:hover {
+            @apply bg-red-500 text-white;
+        }
+    }
+    button[data-controls="prev"] {
+        @apply start-0;
+    }
+    button[data-controls="next"] {
+        @apply end-0;
+    }
+}
+
+/* RTL */
+html[dir="rtl"]{
+    .tns-inner, .tns-nav, .swiper-slider-hero {
+        direction: ltr !important;
+    }
+
+    .tns-visually-hidden {
+        left: 0 !important;
+        visibility: hidden;
+    }
+}
