@@ -5,8 +5,38 @@ import Aura from '@primevue/themes/aura';
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
+	css: [
+		'~/assets/scss/tailwind.scss',
+		 '@/assets/libs/@mdi/font/css/materialdesignicons.min.css'
+	],
 	app: {
 		head: {
+			title: 'ZAP Travel & Tours',
+			titleTemplate: 'ZAP Travel & Tours',
+			htmlAttrs: { class: "light scroll-smooth", dir: "ltr", lang: 'en' },
+			bodyAttrs: {
+				class: 'dark:bg-slate-900',
+			},
+			meta: [
+				{ charset: 'utf-8' },
+				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+				},
+				{ hid: 'description', name: 'description', content: '' },
+				{ name: 'format-detection', content: 'telephone=no' },
+			],
+
+			link: [
+				{
+					rel: 'stylesheet',
+					href: 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+				},
+				{
+					rel: 'stylesheet',
+					href: 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css',
+				}
+			],
 			script: [
 				{
 					src: 'https://widget.mybookingplatform.com/widget.js?v=1.0',
