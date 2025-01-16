@@ -1,6 +1,10 @@
 <template>
+	<!-- TOP BAR -->
 	<div>
-
+		<Topbar />
+	</div>
+	
+	<div>
 		<h5 class="text-2xl font-bold">HOME </h5>
 		<ul>
 			<li class="flex flex-col">
@@ -8,7 +12,6 @@
 				<NuxtLink to="/contact" class=" cursor-pointer">Contact</NuxtLink>
 			</li>
 		</ul>
-
 	</div>
 
 	<section class="relative overflow-hidden">
